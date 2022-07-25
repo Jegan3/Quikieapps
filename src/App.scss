@@ -1,0 +1,20 @@
+.header {
+  .quikie {
+    text-decoration: none;
+    color: #00aeef;
+    font-size: 25px;
+  }
+
+  .apps {
+    color: #000000;
+    position: relative;
+    left: 41px;
+    bottom: 16px;
+  }
+}
+
+.main_content {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
