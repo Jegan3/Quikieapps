@@ -123,23 +123,27 @@ function StockTable() {
       onFilter: (value, record) => {
         return record.name.toLowerCase().includes(value.toLowerCase());
       },
+    
     },
     {
       key: "2",
       title: "SYMBOL",
       dataIndex: "symbol",
+      
     },
     {
       key: "3",
       title: "MAX_SUPPLY",
       dataIndex: "max_supply",
+     
     },
     {
       key: "4",
       title: "Actions",
       render: (record) => !(savedData.includes(record.name)) ?
         <a className="savebtn" onClick={() => { onSaveData(record) }}>Save</a> :
-        <a className="viwebtn" onClick={() => { onviwe() }}>View Stock</a>
+        <a className="viwebtn" onClick={() => { onviwe() }}>View Stock</a>,
+        // fixed: 'right',
     },
   ];
 
@@ -147,7 +151,11 @@ function StockTable() {
   return (
     <div className="App">
       <header className="App-header">
-        <Table columns={columns} dataSource={dataSource}></Table>
+        <Table columns={columns} dataSource={dataSource}
+        scroll={{
+          x: 300,
+        }}
+        ></Table>
       </header>
     </div>
   );
