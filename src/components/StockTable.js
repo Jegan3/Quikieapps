@@ -153,7 +153,7 @@ function StockTable() {
       <header className="App-header">
         <Table columns={columns} dataSource={dataSource}
         scroll={{
-          x: 300,
+          x: 100,
         }}
         ></Table>
       </header>
